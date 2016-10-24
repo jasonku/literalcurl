@@ -1,6 +1,7 @@
 require 'json'
 require 'colorize'
 
+print "\e[H\e[2J"
 puts 'literalcurl: Look up and copy Scripture straight into your clipboard.'.yellow
 
 while true do
