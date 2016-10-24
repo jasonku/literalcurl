@@ -13,15 +13,16 @@ while true do
     parsed = JSON.parse(raw)
 
     if parsed['error'] then
-      puts 'Error.'.red
+      puts "Error: #{parsed['error']}.".red
     else
       ref = parsed.keys.join('')
-      val = "#{ref} #{parsed.values.join('').gsub('"', '\"')}"
-      result = `echo "#{val}" | pbcopy`
-      puts "#{ref} copied to clipboard!".green
+      val = "#{ref} #{parsed.values.join('')}"
+      result = `echo "<p style='font-family: \"Helvetica Neue\";font-size:18px;'><i>#{val.gsub('"', '\"')}</i></p>" | textutil -stdin -format html -convert rtf -stdout | pbcopy`
+      puts "#{val}".green
     end
   rescue
     puts 'Error.'.red
   end
+  puts
 end
 
