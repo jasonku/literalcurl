@@ -2,6 +2,8 @@
 
 Look up and copy Scripture snippets straight into your clipboard.
 
+![demo](https://cloud.githubusercontent.com/assets/318214/19635298/17c5b4a8-9976-11e6-814f-d90576187480.gif)
+
 ## Usage
 
 ```
